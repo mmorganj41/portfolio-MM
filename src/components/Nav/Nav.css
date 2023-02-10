@@ -1,5 +1,4 @@
 .Nav.navbar {
-    visibility: hidden;
     font-family: Quantico, sans-serif;
     font-size: 1.5rem;
     font-weight: 900;
@@ -10,8 +9,7 @@
     z-index: 1000;
     width: 100%;
     text-align: center;
-    background-color: var(--colorThemeDark);
-    transition: padding 200ms ease-in-out, background-color 200ms 200ms linear;
+    transition: height 200ms ease-in-out, background-color 200ms 200ms linear;
     top: 0;
     width: 100%;
     left: 0px;
