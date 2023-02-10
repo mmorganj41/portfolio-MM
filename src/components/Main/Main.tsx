@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Main() {
     return (
-        <div id='main' className='Main'>
+        <section id='main' className='Main section'>
             Main
-        </div>
+        </section>
     )
 }
