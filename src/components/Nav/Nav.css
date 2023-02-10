@@ -1,0 +1,16 @@
+.Nav.navbar {
+    font-family: Quantico, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: -0.075em;
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    text-align: center;
+    background-color: #B19550;
+    transition: padding 200ms ease-in-out, background-color 200ms 200ms linear;
+    top: 0;
+    width: 100%;
+    left: 0px;
+}

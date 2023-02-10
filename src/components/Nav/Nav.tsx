@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import './Header.css'
+import styled from 'styled-components';
+import './Nav.css'
 
 const useWindowScroll = () => {
     const [windowScroll, setWindowScroll] = useState(0);
@@ -18,14 +19,18 @@ const useWindowScroll = () => {
     return windowScroll;
 }
 
-export default function Header(){
-    const scrollY = useWindowScroll(5);
+
+const StyledNav = styled.nav`
+`
+
+export default function Nav(){
+    const scrollY = useWindowScroll();
     return (
-      <h1 className={style("header", scrollY > 64 && "minify")}>
+      <StyledNav className='navbar Nav'>
         <span role="img" aria-label="bricks">
           🧱
         </span>{" "}
-        MASONIC
-      </h1>
+        Michael
+      </StyledNav>
     );
   };
