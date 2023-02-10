@@ -1,9 +1,11 @@
-import React from "react";
+import React, {forwardRef} from "react";
 
-export default function About() {
+const About = forwardRef<HTMLDivElement>((props, ref) => {
     return (
-        <section id='about' className='About section'>
+        <section id='about' className='About section' ref={ref}>
             About
         </section>
     )
-}
+});
+
+export default About

@@ -1,9 +1,11 @@
-import React from "react";
+import React, {forwardRef} from "react";
 
-export default function Contact() {
+const Contact = forwardRef<HTMLDivElement>((props, ref) => {
     return (
-        <section id='contact' className='Contact section'>
+        <section id='contact' className='Contact section' ref={ref}>
             Contact
         </section>
     )
-}
+});
+
+export default Contact;

@@ -1,9 +1,11 @@
-import React from "react";
+import React, {forwardRef} from "react";
 
-export default function Main() {
+const Main = forwardRef<HTMLDivElement>((props, ref) => {
     return (
         <section id='main' className='Main section'>
             Main
         </section>
     )
-}
+});
+
+export default Main;

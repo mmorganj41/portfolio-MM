@@ -11,7 +11,7 @@ const StyledNav = styled.nav<{ transition: boolean}>`
   color: ${({transition}) => transition ? 'var(--colorThemeExtraDark)': 'var(--colorThemeLight)'};
 `
 
-const StyledList = styled.ul<{ transition: boolean}>`
+const StyledList = styled.ul<{ transition: boolean; navLocation: number}>`
   padding-top: ${({transition}) => transition ? '25px': 'none'};
   
   li {
@@ -23,20 +23,24 @@ const StyledList = styled.ul<{ transition: boolean}>`
     color: ${({transition}) => transition ? 'var(--colorThemeExtraDark)': 'var(--colorThemeLight)'};
   }
 
+  li:nth-child(${({navLocation}) => navLocation}) a {
+    color: ${({transition}) => transition ? 'var(--colorThemeDark)': 'var(--colorThemeMedium)'};
+  }
+
   a:hover {
     color: ${({transition}) => transition ? 'var(--colorThemeDark)': 'var(--colorThemeMedium)'};
   }
 `
 
 interface Props {
-  useWindowScroll: Function;
+  containerScroll: number;
+  navLocation: number;
 }
 
 export default function Nav(Props: Props){
-    const {useWindowScroll} = Props;
-    const scrollY = useWindowScroll();
-    let transition = scrollY > scrollTransition;
-    console.log(transition);
+    const {containerScroll, navLocation} = Props;
+    let transition = containerScroll > scrollTransition;
+    console.log(navLocation);
     return (
       <StyledNav className='navbar Nav' transition={transition}>
         <div>
@@ -45,7 +49,7 @@ export default function Nav(Props: Props){
         </span>{" "}
         Michael
         </div>
-        <StyledList className='navitems Nav' transition={transition}>
+        <StyledList className='navitems Nav' transition={transition} navLocation={navLocation}>
           <li><a href='#main'>Main</a></li>
           <li><a href='#about'>About</a></li>
           <li><a href='#projects'>Projects</a></li>
