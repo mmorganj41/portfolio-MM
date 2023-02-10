@@ -16,6 +16,20 @@
     left: 0px;
 }
 
+.Nav.navbar > *:first-child {
+    align-self:center;
+}
+
 .Nav.navitems {
-    display: inline;
+    list-style-type: none;
+    padding-right: 1rem;
+    transition: display 200ms 200ms linear;
+}
+
+.Nav.navitems li {
+    padding: 0 1rem;
+}
+
+.Nav.navitems a {
+    text-decoration: none;
 }

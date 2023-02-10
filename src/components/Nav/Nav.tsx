@@ -12,8 +12,19 @@ const StyledNav = styled.nav<{ transition: boolean}>`
 `
 
 const StyledList = styled.ul<{ transition: boolean}>`
+  padding-top: ${({transition}) => transition ? '25px': 'none'};
+  
   li {
     display: ${({transition}) => transition ? '': 'inline'};
+    
+  }
+
+  a {
+    color: ${({transition}) => transition ? 'var(--colorThemeExtraDark)': 'var(--colorThemeLight)'};
+  }
+
+  a:hover {
+    color: ${({transition}) => transition ? 'var(--colorThemeDark)': 'var(--colorThemeMedium)'};
   }
 `
 
