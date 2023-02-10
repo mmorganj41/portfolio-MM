@@ -21,6 +21,7 @@ const useWindowScroll = () => {
 
 
 const StyledNav = styled.nav`
+  height: 50px;
 `
 
 export default function Nav(){
