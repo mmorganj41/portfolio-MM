@@ -1,0 +1,14 @@
+.Skills .skillSection {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Skills .subtitle {
+    margin-bottom: .5rem;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.Skills {
+    max-width: 50rem;
+}

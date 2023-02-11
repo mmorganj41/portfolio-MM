@@ -2,6 +2,7 @@ import './About.css';
 
 import React, {forwardRef} from "react";
 import Info from "../Info/Info";
+import Skills from '../Skills/Skills';
 
 const About = forwardRef<HTMLDivElement>((props, ref) => {
     return (
@@ -13,6 +14,7 @@ const About = forwardRef<HTMLDivElement>((props, ref) => {
                 </h2>
                 <div className="Data">
                     <Info />
+                    <Skills />
                 </div>
             </div>
         </section>

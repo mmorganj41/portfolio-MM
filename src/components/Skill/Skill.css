@@ -1,0 +1,15 @@
+.Skill {
+    padding: .5rem .75rem;
+    margin-bottom: 1.1rem;
+    margin-right: 1.1rem;
+    font-size: 1rem;
+    background: rgba(153,153,153,.2);
+    border-radius: 5px;
+    font-weight: 300;
+    color: #666;
+}
+
+.Skill:hover {
+    background: rgba(139, 139, 139, 0.2);
+    color: #7d7d7d;
+}

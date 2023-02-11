@@ -10,13 +10,13 @@
     width: 92%;
 }
 
-.Footer.Container .Info {
+.Footer.Container .info {
     display: flex;
     flex-direction: row-reverse;
     padding: 1rem 0;
 }
 
-.Footer.Container .Info i {
+.Footer.Container .info i {
     padding-left: 1rem;
     color: white !important;
 }
