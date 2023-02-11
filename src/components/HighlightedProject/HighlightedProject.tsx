@@ -1,6 +1,7 @@
 import './HighlightedProject.css';
 import { ProjectInfo } from "../Projects/Projects";
 import SocialIcon from "../SocialIcon/SocialIcon";
+import Carousel from '../Carousel/Carousel';
 
 
 interface Props {
@@ -20,7 +21,7 @@ export default function HighlightedProject(props: Props) {
             <h2>{projects[selectedIndex].name}, <span>{projects[selectedIndex].summary}</span></h2>
         </div>
         <div className='carousel'>
-            {/* TBD */}
+            <Carousel images={projects[selectedIndex].images} />
         </div>
         <div className='bullets'>
             <ul>
