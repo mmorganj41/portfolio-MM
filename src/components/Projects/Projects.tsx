@@ -1,4 +1,5 @@
 import React, {forwardRef, useState} from "react";
+import HighlightedProject from "../HighlightedProject/HighlightedProject";
 import ProjectList from "../ProjectList/ProjectList";
 
 const Projects = forwardRef<HTMLDivElement>((props, ref) => {
@@ -16,7 +17,10 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
                     <div className="main">Projects</div>
                     <div className="secondary">Front-end and Back-end creativity with a focus on JS.</div>
                 </h2> 
+                <div>
                 <ProjectList projects={projects} liftIndex={liftIndex}/>
+                <HighlightedProject projects={projects} selectedIndex={selectedIndex} />
+                </div>
             </div>
         </section>
     )
