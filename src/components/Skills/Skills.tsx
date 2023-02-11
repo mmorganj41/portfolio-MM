@@ -10,16 +10,16 @@ const skills: Record<string, string[]> = {
 
 export default function Skills() {
     const skillsComponents = Object.keys(skills).map(key => {
-        const eachSkill = skills[key].map(e => {
-            return (<Skill skill={e} />)
+        const eachSkill = skills[key].map((e,i) => {
+            return (<Skill skill={e} key={i}/>)
         })
 
-        return (<>
+        return (<div key={key}>
             <h5 className='subtitle'>{key}</h5>
             <div className='skillSection'>
             {eachSkill}
             </div>
-        </>)
+        </div>)
     })
 
     return (<div className="Skills">

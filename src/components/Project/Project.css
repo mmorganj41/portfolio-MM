@@ -6,7 +6,17 @@
 }
 
 .Project {
-    background: #cecaca;
+    background:#cecaca;
+    padding: 2.5rem;
+    text-align: left;
+    border-radius: 5px;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 25rem;
+    cursor: pointer;
+    transition: 2s;
     padding: 2.5rem;
     text-align: left;
     border-radius: 5px;
@@ -21,6 +31,7 @@
 
 .Project:hover {
     transform: translateY(-1rem);
+    background-color: #d4d2d2;
 }
 
 .Project .projectTitle {
@@ -34,4 +45,8 @@
     font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: 0;
+}
+
+.Project p {
+    font-style: italic;
 }
