@@ -1,0 +1,13 @@
+.Info {
+    max-width: 50rem;
+}
+
+.Info .details {
+    margin-bottom: 2rem;
+}
+
+.Info .title {
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
