@@ -2,7 +2,7 @@ import Skill from "../Skill/Skill";
 import './Skills.css';
 
 const skills: Record<string, string[]> = {
-    Languages: ['Javascript', 'Python', 'Ruby', 'HTML5', 'CSS', 'SQL', 'AutoIt3', 'Matlab'],
+    Languages: ['Javascript', 'Typescript', 'Python', 'Ruby', 'HTML5', 'CSS', 'SQL', 'AutoIt3', 'Matlab'],
     Frameworks: ['Node.js', 'Express', 'React', 'JQuery', 'Bootstrap', 'Django'],
     Software: ['Git', 'GitHub', 'AWS', 'PostgreSQL', 'Docker', 'MySQL', 'MongoDB', 'Linux', 'Trello'],
     General: ['Computer Science', 'Technical Communication', 'Management', 'Marketing', 'Manufacturing', 'Technical Writing', 'Full Stack']
