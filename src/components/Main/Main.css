@@ -14,14 +14,24 @@
 .Main.section .name {
     font-weight: 600;
     color: var(--colorThemeOrange);
+    transition: 5s;
 }
 
-.Main.section > div {
+.Main.section .container > div {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.Main.section > div:first-child {
+.Main.section .container > div:first-child {
     padding-bottom: 2rem;
+}
+
+.Main.section .container {
+    max-width: 120rem;
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
