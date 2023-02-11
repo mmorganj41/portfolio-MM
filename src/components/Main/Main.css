@@ -1,0 +1,16 @@
+.Main.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Main.section h1 {
+    font-weight: 500;
+    color: var(--colorThemeExtraDark);
+}
+
+.Main.section .name {
+    font-weight: 600;
+    color: var(--colorThemeOrange);
+}

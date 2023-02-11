@@ -24,7 +24,7 @@ const StyledList = styled.ul<{ transition: boolean; navLocation: number}>`
   }
 
   li:nth-child(${({navLocation}) => navLocation}) a {
-    color: ${({transition}) => transition ? 'var(--colorThemeDark)': 'var(--colorThemeMedium)'};
+    color: var(--colorThemeOrange);
   }
 
   a:hover {
