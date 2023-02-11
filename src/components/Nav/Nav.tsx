@@ -52,10 +52,8 @@ export default function Nav(Props: Props){
     return (
       <>
         <StyledNav className='navbar Nav' transition={transition}>
-          <div>
-          <span role="img" aria-label="bricks">
-            &nbsp;🧱
-          </span>{" "}
+          <div className='imageContainer'>
+            <a href="#main"><img className='avatar' src='/MichaelMorganLogo.png' /></a>
           </div>
           {!transition && largeEnough
           ? (<StyledList className='navitems Nav' transition={transition} navLocation={navLocation}>

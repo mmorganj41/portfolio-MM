@@ -29,3 +29,16 @@
 .Nav.navitems li {
     padding: 0 1rem;
 }
+
+.Nav > .imageContainer {
+    padding-left: 10px;
+}
+
+.Nav .avatar {
+    height: 38.46px;
+    width: 27.76px;
+}
+
+.Nav .avatar:hover {
+    filter: brightness(120%) saturate(110%);
+}
