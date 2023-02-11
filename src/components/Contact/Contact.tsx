@@ -1,4 +1,5 @@
 import React, {forwardRef} from "react";
+import ContactForm from "../ContactForm/ContactForm";
 
 const Contact = forwardRef<HTMLDivElement>((props, ref) => {
     return (
@@ -8,6 +9,7 @@ const Contact = forwardRef<HTMLDivElement>((props, ref) => {
                     <div className="main">Contact</div>
                     <div className="secondary">Questions? Comments? Opportunities? Let me know.</div>
                 </h2>
+                <ContactForm />
             </div>
         </section>
     )
