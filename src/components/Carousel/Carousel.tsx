@@ -2,31 +2,33 @@ import './Carousel.css';
 import { useEffect, useState } from 'react';
 
 interface Props {
-    images: string[]
+    images: string[];
+    carouselIndex: number;
+    setCarouselIndex: Function;
 }
 const delay = 6000;
 
 export default function Carousel(props: Props) {
     const {images} = props;
-    const [index, setIndex] = useState(0);
+    const [carouselIndex, setCarouselIndex] = useState(0);
 
     function handleClick(i: number) {
-        setIndex(i);
+        setCarouselIndex(i);
     }
 
     useEffect(() => {
         const timer = setTimeout(
             () =>
-            setIndex((prevIndex) =>
+            setCarouselIndex((prevIndex) =>
             prevIndex === images.length - 1 ? 0 : prevIndex + 1),
             delay
         );
 
         return () => clearTimeout(timer);
-    }, [index])
+    }, [carouselIndex])
     return (
         <div className='Carousel'>
-            <div className='slider' style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
+            <div className='slider' style={{ transform: `translate3d(${-carouselIndex * 100}%, 0, 0)` }}>
                 {images.map((image, i) => (
                     <div className='slide'
                     key={i} >
@@ -38,7 +40,7 @@ export default function Carousel(props: Props) {
             </div>
             <div className='dots'>
                 {images.map((_, i) => (
-                    <div key={i} className='dot' style={{ backgroundColor: `${i === index ? 'var(--colorThemeOrange)' : '#c4c4c4'}`}} onClick={() => handleClick(i)}/>
+                    <div key={i} className='dot' style={{ backgroundColor: `${i === carouselIndex ? 'var(--colorThemeOrange)' : '#c4c4c4'}`}} onClick={() => handleClick(i)}/>
                 ))}
             </div>
         </div>

@@ -5,10 +5,10 @@ import ProjectList from "../ProjectList/ProjectList";
 
 const Projects = forwardRef<HTMLDivElement>((props, ref) => {
     const [selectedIndex, setSelectedIndex] = useState(0);
+    const [carouselIndex, setCarouselIndex] = useState(0);
 
     function liftIndex(index:number) {
         setSelectedIndex(index);
-        console.log(selectedIndex);
     }
 
     return (
@@ -20,7 +20,7 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
                 </h2> 
                 <div className='data'>
                 <ProjectList projects={projects} liftIndex={liftIndex} selectedIndex={selectedIndex}/>
-                <HighlightedProject projects={projects} selectedIndex={selectedIndex} />
+                <HighlightedProject projects={projects} selectedIndex={selectedIndex} setCarouselIndex={setCarouselIndex}/>
                 </div>
             </div>
         </section>
