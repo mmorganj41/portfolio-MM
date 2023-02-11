@@ -9,8 +9,7 @@ interface Props {
 const delay = 6000;
 
 export default function Carousel(props: Props) {
-    const {images} = props;
-    const [carouselIndex, setCarouselIndex] = useState(0);
+    const {images, setCarouselIndex, carouselIndex} = props;
 
     function handleClick(i: number) {
         setCarouselIndex(i);
@@ -19,7 +18,7 @@ export default function Carousel(props: Props) {
     useEffect(() => {
         const timer = setTimeout(
             () =>
-            setCarouselIndex((prevIndex) =>
+            setCarouselIndex((prevIndex: number) =>
             prevIndex === images.length - 1 ? 0 : prevIndex + 1),
             delay
         );
