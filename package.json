@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d build"
+    "deploy": "vite deploy"
   },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
