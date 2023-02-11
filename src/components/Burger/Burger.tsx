@@ -46,10 +46,11 @@ interface Props {
     open: boolean;
     setOpen: Function;
     navLocation: number;
+    largeEnough: boolean;
 }
 
 export default function Burger(props: Props) {
-    const {transition, open, setOpen, navLocation} = props;
+    const {transition, open, setOpen, navLocation, largeEnough} = props;
 
     function handleOpen() {
         setOpen(!open);
@@ -57,12 +58,13 @@ export default function Burger(props: Props) {
 
     return (
         <div className='Burger'>
-        <StyledBurger open={open} transition={transition} onClick={handleOpen}>
+        {largeEnough ? null
+        : <StyledBurger open={open} transition={transition} onClick={handleOpen}>
             <div></div>
             <div></div>
             <div></div>
-        </StyledBurger>
-        <Sidebar open={open} transition={transition} navLocation={navLocation}/>
+        </StyledBurger>}        
+        <Sidebar open={open} largeEnough={largeEnough} transition={transition} navLocation={navLocation}/>
         </div>
     )
 } 
