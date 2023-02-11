@@ -52,12 +52,25 @@ ration.addBullets(
 );
 
 ration.addImages(
+    '/ration/rationList.png',
     '/ration/Home.png',
     '/ration/NutritionTracker.png',
-    '/ration/rationList.png',
-)
+);
 
-const projects = [ration, pokeCatcher, battleship];
+const progress = new ProjectInfo('Progress', 'A Competitive and Community-centric habit tracker');
+progress.addBullets(
+    'Drafted and programmed a 5+ page web-design system for users to track and develop skills every day based upon continual completion of repeating habits.',
+    'Assembled over 35 components in react to construct the front-end ui, which, when interacted with, made RESTful API calls on the backend MongoDB server in a reactive and pleasant manner.',
+    'Incorporated JWT and AWS S3 cloud for user authorization and photo storage respectively.',
+);
+
+progress.addImages(
+    '/progress/habits.png',
+    '/progress/profile.png',
+    '/progress/tracker.png',
+);
+
+const projects = [progress, ration, pokeCatcher, battleship];
 
 export default function ProjectList() {
     const projectJSX = projects.map(project => {
