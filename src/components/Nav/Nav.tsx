@@ -40,7 +40,7 @@ interface Props {
 export default function Nav(Props: Props){
     const {containerScroll, navLocation} = Props;
     let transition = containerScroll > scrollTransition;
-    console.log(navLocation);
+    console.log('nav location: ',navLocation);
     return (
       <StyledNav className='navbar Nav' transition={transition}>
         <div>

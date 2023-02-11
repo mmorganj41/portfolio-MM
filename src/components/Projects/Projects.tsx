@@ -6,7 +6,7 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
             <div className="container">
                 <h2 className="heading">
                     <div className="main">Projects</div>
-                    <div className="secondary"></div>
+                    <div className="secondary">Front-end and Back-end creativity with a focus on JS.</div>
                 </h2>
             </div>
         </section>

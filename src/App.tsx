@@ -42,19 +42,20 @@ function App() {
   function visibleInContainer(elements: Ref[]) {
     if (!containerRef.current) return;
     const containerTop = containerRef.current.scrollTop;
-    const containerBottom = containerTop + containerRef.current.clientHeight;
-    console.log(containerTop);
+
     let result = 1;
-    elements.forEach((ele, i) => {
+    let eleTop = 0;
+    let eleBottom = 0;
+   
+    elements.every((ele, i) => {
       if (!ele) return;
-      const eleTop = ele.offsetTop;
-      const eleBottom = eleTop + ele.clientHeight;
+      const previousMidpoint = (eleTop + eleBottom) / 2;
+      if (containerTop < previousMidpoint) return false;
+      eleTop = eleBottom;
+      eleBottom = eleTop + ele.clientHeight;
       
-      
-      if ((eleTop >= containerTop && eleBottom <= containerBottom) ||
-        // Some part of the element is visible in the container
-      (eleTop < containerTop && containerTop < eleBottom) ||
-      (eleTop < containerBottom && containerBottom < eleBottom)) result = i+1;
+      if (containerTop >= previousMidpoint) result = i+1;
+      return true;
     })
 
     setNavLocation(result)

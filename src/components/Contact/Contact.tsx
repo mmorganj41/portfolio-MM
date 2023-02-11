@@ -6,7 +6,7 @@ const Contact = forwardRef<HTMLDivElement>((props, ref) => {
             <div className="container">
                 <h2 className="heading">
                     <div className="main">Contact</div>
-                    <div className="secondary"></div>
+                    <div className="secondary">Questions? Comments? Opportunities? Let me know.</div>
                 </h2>
             </div>
         </section>
