@@ -10,6 +10,10 @@ export default function Carousel(props: Props) {
     const {images} = props;
     const [index, setIndex] = useState(0);
 
+    function handleClick(i: number) {
+        setIndex(i);
+    }
+
     useEffect(() => {
         const timer = setTimeout(
             () =>
@@ -26,13 +30,15 @@ export default function Carousel(props: Props) {
                 {images.map((image, i) => (
                     <div className='slide'
                     key={i} >
+                        <a href={image} target='_blank'>
                         <img src={image} />
+                        </a>
                     </div>
                 ))}
             </div>
             <div className='dots'>
                 {images.map((_, i) => (
-                    <div key={i} className='dot' />
+                    <div key={i} className='dot' style={{ backgroundColor: `${i === index ? 'var(--colorThemeOrange)' : '#c4c4c4'}`}} onClick={() => handleClick(i)}/>
                 ))}
             </div>
         </div>
