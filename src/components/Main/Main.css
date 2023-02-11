@@ -8,9 +8,20 @@
 .Main.section h1 {
     font-weight: 500;
     color: var(--colorThemeExtraDark);
+    font-size: 2.5rem;
 }
 
 .Main.section .name {
     font-weight: 600;
     color: var(--colorThemeOrange);
+}
+
+.Main.section > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Main.section > div:first-child {
+    padding-bottom: 2rem;
 }
