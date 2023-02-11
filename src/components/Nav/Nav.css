@@ -1,8 +1,8 @@
 .Nav.navbar {
     font-family: Quantico, sans-serif;
-    font-size: 1.5rem;
-    font-weight: 70;
-    letter-spacing: -0.075em;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: .075em;
     display: flex;
     align-items: center;
     justify-content: space-between;

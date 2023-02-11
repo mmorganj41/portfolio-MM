@@ -1,4 +1,5 @@
 import React, {forwardRef} from "react";
+import ProjectList from "../ProjectList/ProjectList";
 
 const Projects = forwardRef<HTMLDivElement>((props, ref) => {
     return (
@@ -7,7 +8,8 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
                 <h2 className="heading">
                     <div className="main">Projects</div>
                     <div className="secondary">Front-end and Back-end creativity with a focus on JS.</div>
-                </h2>
+                </h2> 
+                <ProjectList />
             </div>
         </section>
     )
