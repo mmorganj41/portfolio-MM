@@ -6,26 +6,6 @@ import './Nav.css'
 
 const scrollTransition = 64;
 
-export const useOnClickOutside = (ref, handler: Function) => {
-
-  useEffect(() => {
-    const listener = (event: Event) => {
-      if (event.target instanceof Element){
-        if (ref && (!ref.current || ref.current.contains(event.target))) {
-          return;
-        }
-      }
-      handler(event);
-    };
-    document.addEventListener('mousedown', listener);
-    return () => {
-      document.removeEventListener('mousedown', listener);
-    };
-  },
-  [ref, handler],
-  );
-};
-
 const StyledNav = styled.nav<{ transition: boolean}>`
   height: ${({transition}) => transition ? '100px': '50px'};
   background-color: ${({transition}) => transition ? 'transparent' : 'var(--colorThemeExtraDark)'};
@@ -49,8 +29,6 @@ export default function Nav(Props: Props){
     const {containerScroll, navLocation} = Props;
     const [windowSize, setWindowSize] = useState(0);
     const [open, setOpen] = useState(false);
-    // const node = useRef<HTMLDivElement>();
-    // useOnClickOutside(node, () => setOpen(false));
 
     useEffect(() => {
       updateWindowSize();
@@ -74,9 +52,8 @@ export default function Nav(Props: Props){
         <StyledNav className='navbar Nav' transition={transition}>
           <div>
           <span role="img" aria-label="bricks">
-            🧱
+            &nbsp;🧱
           </span>{" "}
-          Michael
           </div>
           {!transition && largeEnough
           ? (<StyledList className='navitems Nav' transition={transition} navLocation={navLocation}>
