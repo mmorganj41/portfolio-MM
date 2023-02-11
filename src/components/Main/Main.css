@@ -12,9 +12,10 @@
 }
 
 .Main.section .name {
+    display:inline-block;
     font-weight: 600;
     color: var(--colorThemeOrange);
-    transition: 5s;
+    animation: fadeInAbove 1s ease-out 1;
 }
 
 .Main.section .container > div {
@@ -34,4 +35,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+
+@keyframes fadeInAbove {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
