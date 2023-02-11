@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import Burger from '../Burger/Burger';
 import './Nav.css'
 
 const scrollTransition = 64;
@@ -49,12 +50,15 @@ export default function Nav(Props: Props){
         </span>{" "}
         Michael
         </div>
-        <StyledList className='navitems Nav' transition={transition} navLocation={navLocation}>
+        {!transition 
+        ? (<StyledList className='navitems Nav' transition={transition} navLocation={navLocation}>
           <li><a href='#main'>Main</a></li>
           <li><a href='#about'>About</a></li>
           <li><a href='#projects'>Projects</a></li>
           <li><a href='#contact'>Contact</a></li>
-        </StyledList>
+        </StyledList>)
+        : null }
+        <Burger transition={transition}/>
       </StyledNav>
     );
   };
