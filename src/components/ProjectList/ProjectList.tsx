@@ -1,3 +1,4 @@
+import './ProjectList.css';
 import Project from "../Project/Project";
 
 class ProjectInfo {
@@ -74,11 +75,11 @@ const projects = [progress, ration, pokeCatcher, battleship];
 
 export default function ProjectList() {
     const projectJSX = projects.map(project => {
-        return <Project image={project.images[0]} name={project.name} summary={project.summary} />
+        return <Project key={project.name} image={project.images[0]} name={project.name} summary={project.summary} />
     }) 
 
     return (
-        <div>
+        <div className='ProjectList'>
             {projectJSX}
         </div>
     )

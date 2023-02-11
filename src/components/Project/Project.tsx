@@ -11,7 +11,7 @@ export default function Project(props: Props) {
     return (
         <div className='Project'>
             <img src={image} />
-            <h5>{name}</h5>
+            <h5 className='projectTitle'>{name}</h5>
             <p>{summary}</p>
         </div>
     )

@@ -1,3 +1,36 @@
 .Project img {
     max-width: 20rem;
+    border: solid rgba(0, 0, 0, 0.437) .1rem;
+    border-radius: 5px;
+}
+
+.Project {
+    background: #cecaca;
+    padding: 2.5rem;
+    text-align: left;
+    border-radius: 5px;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 25rem;
+    cursor: pointer;
+    transition: 2s;
+}
+
+.Project:hover {
+    transform: translateY(-1rem);
+}
+
+.Project .projectTitle {
+    text-align: left;
+    background: #ffffff;
+    padding: .2rem;
+    border-radius: 5px;
+    margin-top: .5rem;
+    margin-bottom: .3rem;
+    color: #666;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0;
 }

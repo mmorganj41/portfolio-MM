@@ -30,8 +30,6 @@ export default function Nav(Props: Props){
     const [windowSize, setWindowSize] = useState(0);
     const [open, setOpen] = useState(false);
 
-    console.log(windowSize, containerScroll);
-
     useEffect(() => {
       updateWindowSize();
       window.addEventListener("resize", updateWindowSize);
@@ -48,7 +46,6 @@ export default function Nav(Props: Props){
 
     let transition = containerScroll > scrollTransition;
   
-    console.log('nav location: ',navLocation);
     return (
       <>
         <StyledNav className='navbar Nav' transition={transition}>
