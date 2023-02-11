@@ -48,7 +48,7 @@ export default function ContactForm() {
                 <label htmlFor='message'>Message</label>
                 <textarea id="message" cols={30} rows={3} name="message" value={formState.message} onChange={handleChange}/>
             </div>
-            <button className="btn btn--bg" type="submit" disabled={ status=== 'sent' || status==='loading'} onClick={handleSubmit}>{status === 'loading' ? (<i className="fa fa-spinner" aria-hidden="true" />) : status === 'sent' ? 'Sent!' : 'Submit'}</button>
+            <button className="btn" type="submit" disabled={ status=== 'sent' || status==='loading'} onClick={handleSubmit}>{status === 'loading' ? (<i className="fa fa-spinner" aria-hidden="true" />) : status === 'sent' ? 'Sent!' : 'Submit'}</button>
         </form>
     </div>)
 }

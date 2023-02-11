@@ -5,3 +5,7 @@
 .Info .details {
     margin-bottom: 2rem;
 }
+
+.Info .details p {
+    margin-bottom: 1rem;
+}

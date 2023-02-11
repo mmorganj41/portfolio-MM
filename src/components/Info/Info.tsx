@@ -6,7 +6,8 @@ export default function Info() {
         <div className='Info'>
             <h3 className='title'>About Me</h3>
             <div className='details'>
-                <p>A <strong>software engineer</strong> with a 5+ year background in biomedical engineering and consulting with demonstrated competence in finding solutions to complex problems. Understands and can communicate technical information to a variety of individuals, developed through experiences in diverse collaborations. Continuously looks to improve, as shown by continuous re-iteration of technology and optimization of projects on a team and in personal life.</p>
+                <p>A <strong>software engineer</strong> with a 5+ year background in biomedical engineering and consulting with demonstrated competence in finding solutions to complex problems.</p>
+                <p>Understands and can communicate technical information to a variety of individuals, developed through experiences in diverse collaborations. Continuously looks to improve, as shown by continuous re-iteration of technology and optimization of projects on a team and in personal life.</p>
             </div>
             <div className='socials'>
                 <SocialIcon icon='linkedin' link='https://www.linkedin.com/in/michael-morgan-j41/' samePage={false}/>
