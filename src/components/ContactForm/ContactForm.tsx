@@ -1,4 +1,7 @@
+import {FormEventHandler, useState} from 'react';
 import {useImmer} from 'use-immer';
+import { send } from '@emailjs/browser';
+
 import './ContactForm.css';
 
 export default function ContactForm() {
@@ -8,6 +11,8 @@ export default function ContactForm() {
         message: '', 
     })
 
+    const [status, setStatus] = useState('')
+
     function handleChange(e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) {
         const key = e.target.name;
         
@@ -15,6 +20,18 @@ export default function ContactForm() {
             (draft as Record<string, string>)[key] = e.target.value;
         });
            
+    }
+
+    async function handleSubmit(e: any) {
+        e.preventDefault();
+        try {
+            setStatus('loading');
+            await send('service_v2vp1tp', 'template_ltbxcma', formState, '3M13N5dcfiSL1vOlK');
+            setStatus('sent')
+        } catch(err) {
+            console.log(err);
+            setStatus('error');
+        }
     }
 
     return (<div className="ContactForm">
@@ -31,7 +48,7 @@ export default function ContactForm() {
                 <label htmlFor='message'>Message</label>
                 <textarea id="message" cols={30} rows={10} name="message" value={formState.message} onChange={handleChange}/>
             </div>
-            <button className="btn btn--bg" type="submit">Submit</button>
+            <button className="btn btn--bg" type="submit" disabled={ status=== 'sent' || status==='loading'} onClick={handleSubmit}>{status === 'loading' ? (<i className="fa fa-spinner" aria-hidden="true" />) : status === 'sent' ? 'Sent!' : 'Submit'}</button>
         </form>
     </div>)
 }

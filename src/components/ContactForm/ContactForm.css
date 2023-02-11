@@ -43,3 +43,14 @@
     max-width: 60%;
     font-size: 1.6rem;
 }
+
+.fa-spinner {
+    animation: spin 4s linear infinite;
+}
+
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
