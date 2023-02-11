@@ -65,7 +65,7 @@ battleship.addBullets(
     'Produced an interactive user interface using HTML, Javascript, and CSS allowing one player to drag and drop ships and select squares to fire upon during battles against an AI opponent.',
     'Made the classic game of Battleship complete with sound effects and animations, and added a feature for tracking wins and losses for repeatable and enjoyable gameplay experience.'
 );
-battleship.addImages('battleship/PlayingSS.png', '/battleship/draggingSS.png', '/battleship/GameoverSS.png', );
+battleship.addImages('https://i.imgur.com/r1AitIF.png', 'https://i.imgur.com/jXN1nTv.png', 'https://i.imgur.com/JUaOLo3.png', );
 
 const pokeCatcher = new ProjectInfo('PokeCatcher', 
     'A MERN-based online game',
@@ -78,10 +78,10 @@ pokeCatcher.addBullets(
     'Created the full CRUD website application to pokemon training through battles and for tracking individual progression through saved levels, health, and move data using Google OAuth.'
 );
 pokeCatcher.addImages(
-    '/pokeCatcher/BattleGame.png',
-    '/pokeCatcher/Battle.png',
-    '/pokeCatcher/All Pokemon.png',
-    '/pokeCatcher/NewPokemon.png',
+    'https://i.imgur.com/3Ks7ILo.png',
+    'https://i.imgur.com/2sDJrLB.png',
+    'https://i.imgur.com/xYIn0XI.png',
+    'https://i.imgur.com/sugeJXD.png',
 );
 
 const ration = new ProjectInfo('Ration',
@@ -97,9 +97,9 @@ ration.addBullets(
 );
 
 ration.addImages(
-    '/ration/rationList.png',
-    '/ration/Home.png',
-    '/ration/NutritionTracker.png',
+    'https://i.imgur.com/QC4okV2.png',
+    'https://i.imgur.com/JqLOLwH.png',
+    'https://i.imgur.com/zKQB7Wz.png',
 );
 
 const progress = new ProjectInfo('Progress', 
@@ -114,9 +114,9 @@ progress.addBullets(
 );
 
 progress.addImages(
-    '/progress/habits.png',
-    '/progress/profile.png',
-    '/progress/tracker.png',
+    'https://i.imgur.com/tiwOBj8.png',
+    'https://i.imgur.com/uVFfGmG.png',
+    'https://i.imgur.com/IWMF5Jt.png',
 );
 
 const projects = [progress, ration, pokeCatcher, battleship];

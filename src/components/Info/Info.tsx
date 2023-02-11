@@ -12,7 +12,7 @@ export default function Info() {
             <div className='socials'>
                 <SocialIcon icon='linkedin' link='https://www.linkedin.com/in/michael-morgan-j41/' samePage={false}/>
                 <SocialIcon icon='github' link='https://github.com/mmorganj41' samePage={false}/>
-                <SocialIcon icon='file' link='/Resume_MichaelMorgan.pdf' samePage={false} />
+                <SocialIcon icon='file' link='/portfolio-MM/Resume_MichaelMorgan.pdf' samePage={false} />
                 <SocialIcon icon='envelope' link='#contact' samePage={true}/>
             </div>
         </div>
