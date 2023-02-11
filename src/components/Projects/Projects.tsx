@@ -19,7 +19,7 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
                     <div className="secondary">Front-end and Back-end creativity with a focus on JS.</div>
                 </h2> 
                 <div className='data'>
-                <ProjectList projects={projects} liftIndex={liftIndex}/>
+                <ProjectList projects={projects} liftIndex={liftIndex} selectedIndex={selectedIndex}/>
                 <HighlightedProject projects={projects} selectedIndex={selectedIndex} />
                 </div>
             </div>
@@ -32,13 +32,17 @@ export default Projects;
 export class ProjectInfo {
     name: string;
     summary: string;
+    github: string;
+    deploy: string;
     images: string[];
-    bullets: string[]
-    constructor(name: string, summary: string) {
+    bullets: string[];
+    constructor(name: string, summary: string, github:string, deploy: string, ) {
         this.name = name;
         this.summary = summary;
         this.images = [];
         this.bullets = [];
+        this.deploy = deploy;
+        this.github = github;
     }
     addImages(...images: string[]) {
         for (let i=0; i< images.length; i++) {
@@ -52,14 +56,22 @@ export class ProjectInfo {
     }
 }
 
-const battleship = new ProjectInfo('Battleship', 'A browser-based game built in vanilla JS');
+const battleship = new ProjectInfo('Battleship',
+    'A browser-based game built in vanilla JS',
+    'https://github.com/mmorganj41/battleship-webgame',
+    'https://mmorganj41.github.io/battleship-webgame/',
+);
 battleship.addBullets(
     'Produced an interactive user interface using HTML, Javascript, and CSS allowing one player to drag and drop ships and select squares to fire upon during battles against an AI opponent.',
     'Made the classic game of Battleship complete with sound effects and animations, and added a feature for tracking wins and losses for repeatable and enjoyable gameplay experience.'
 );
 battleship.addImages('battleship/PlayingSS.png', '/battleship/draggingSS.png', '/battleship/GameoverSS.png', );
 
-const pokeCatcher = new ProjectInfo('PokeCatcher', 'A MERN-based online game');
+const pokeCatcher = new ProjectInfo('PokeCatcher', 
+    'A MERN-based online game',
+    'https://github.com/mmorganj41/Pokemon-Crud-App',
+    'https://tasty-pink-elk.cyclic.app/',    
+);
 pokeCatcher.addBullets(
     'Constructed a browser game utilizing JavaScript, by interfacing with public APIs and parsing JSON data to mimic traditional Pokemon battle mechanics.',
     'Leveraged MongoDB to store user and pokemon data, integrated with Node.JS, mongoose, and express for inter-player interactions.',
@@ -72,7 +84,11 @@ pokeCatcher.addImages(
     '/pokeCatcher/NewPokemon.png',
 );
 
-const ration = new ProjectInfo('Ration', 'A recipe and nutrition tracker built with Django');
+const ration = new ProjectInfo('Ration',
+    'A recipe and nutrition tracker built with Django',
+    'https://github.com/mmorganj41/Ration_Django_Web_App',
+    'https://still-pond-2186.fly.dev/'
+);
 ration.addBullets(
     'Implemented Git version control and agile development methodologies for software development, specifically a full stack web application using Python and Django.',
     'Devised functions to make REST API calls to perform CRUD operations on a Postgres database, and implemented image storage on AWS S3.',
@@ -86,7 +102,11 @@ ration.addImages(
     '/ration/NutritionTracker.png',
 );
 
-const progress = new ProjectInfo('Progress', 'A Competitive and Community-centric habit tracker');
+const progress = new ProjectInfo('Progress', 
+    'A Competitive and Community-centric habit tracker',
+    'https://github.com/mmorganj41/Progress',
+    'https://prickly-bear-pocketbook.cyclic.app/',
+);
 progress.addBullets(
     'Drafted and programmed a 5+ page web-design system for users to track and develop skills every day based upon continual completion of repeating habits.',
     'Assembled over 35 components in react to construct the front-end ui, which, when interacted with, made RESTful API calls on the backend MongoDB server in a reactive and pleasant manner.',

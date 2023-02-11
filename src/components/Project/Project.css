@@ -29,6 +29,7 @@
     transition: 2s;
 }
 
+
 .Project:hover {
     transform: translateY(-1rem);
     background-color: #d4d2d2;
@@ -45,6 +46,12 @@
     font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: 0;
+    transition: 2s;
+}
+
+.Project.selected .projectTitle {
+    background: var(--colorThemeOrange);
+    color: white;
 }
 
 .Project p {

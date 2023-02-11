@@ -6,13 +6,14 @@ import { ProjectInfo } from '../Projects/Projects';
 interface Props {
     projects: ProjectInfo[];
     liftIndex: Function;
+    selectedIndex: number;
 }
 
 export default function ProjectList(props: Props) {
-    const {projects, liftIndex} = props;
+    const {projects, liftIndex, selectedIndex} = props;
 
     const projectJSX = projects?.map((project, i) => {
-        return <Project key={project.name} liftIndex={liftIndex} index={i} image={project.images[0]} name={project.name} summary={project.summary} />
+        return <Project key={project.name} liftIndex={liftIndex} selectedIndex={selectedIndex} index={i} image={project.images[0]} name={project.name} summary={project.summary} />
     }) 
 
     return (

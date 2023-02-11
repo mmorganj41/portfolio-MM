@@ -1,4 +1,6 @@
+import './HighlightedProject.css';
 import { ProjectInfo } from "../Projects/Projects";
+import SocialIcon from "../SocialIcon/SocialIcon";
 
 
 interface Props {
@@ -24,6 +26,10 @@ export default function HighlightedProject(props: Props) {
             <ul>
                 {bullets}
             </ul>
+        </div>
+        <div className='links'>
+            <SocialIcon icon='github' link={projects[selectedIndex].github} samePage={false}/>
+            <SocialIcon icon='play' link={projects[selectedIndex].deploy} samePage={false}/>
         </div>
     </div>)
     

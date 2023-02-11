@@ -1,0 +1,38 @@
+.HighlightedProject .links {
+    margin-top: 2rem;
+}
+
+.HighlightedProject {
+    box-shadow: rgba(100,100,111,.2) 0 7px 29px 0;
+    background: #fff;
+    padding: 2.5rem;
+    text-align: left;
+    border-radius: 5px;
+    margin: 5rem auto 0 auto;
+    display: flex;
+    max-width: 30rem;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 95%;
+    margin: auto;
+}
+
+.HighlightedProject li {
+    list-style-type: '»';
+    padding-inline-start: 1ch;
+}
+
+.HighlightedProject .name {
+    margin-bottom: 2rem;
+}
+
+.HighlightedProject .name h2 {
+    font-weight: 400;
+    color: var(--colorThemeExtraDark);
+}
+
+.HighlightedProject .name span {
+    font-weight: 300;
+    font-style: italic;
+    color: #a1a1a1;
+}
