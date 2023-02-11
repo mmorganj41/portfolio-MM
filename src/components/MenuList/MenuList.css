@@ -1,0 +1,11 @@
+.inlineList {
+    display: inline;
+}
+
+a {
+    color: var(--colorThemeLight);
+}
+
+a:hover {
+    color: var(--colorThemeMedium);
+}

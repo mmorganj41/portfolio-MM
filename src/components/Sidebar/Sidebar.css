@@ -1,0 +1,12 @@
+.Sidebar {
+    display: block;
+    position: fixed;
+    width: 150px;
+    height: 250px;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: var(--colorThemeDark);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+  }

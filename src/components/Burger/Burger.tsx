@@ -1,5 +1,8 @@
+import './Burger.css';
+
 import { useState } from "react";
 import styled from "styled-components";
+import Sidebar from "../Sidebar/Sidebar";
 
 const StyledBurger = styled.div<{open: boolean; transition: boolean;}>`
     display: block;
@@ -12,7 +15,8 @@ const StyledBurger = styled.div<{open: boolean; transition: boolean;}>`
     z-index: 150;
     height: 26px;
     width: 32px;
-    padding-right: 1rem;
+    margin-top: .5rem;
+    padding-right: 3rem;
     
         div {
         width: 2rem;
@@ -39,21 +43,26 @@ const StyledBurger = styled.div<{open: boolean; transition: boolean;}>`
 
 interface Props {
     transition: boolean;
+    open: boolean;
+    setOpen: Function;
+    navLocation: number;
 }
 
 export default function Burger(props: Props) {
-    const {transition} = props;
-    const [open, setOpen] = useState(false);
+    const {transition, open, setOpen, navLocation} = props;
 
     function handleOpen() {
         setOpen(!open);
     }
 
     return (
+        <div className='Burger'>
         <StyledBurger open={open} transition={transition} onClick={handleOpen}>
             <div></div>
             <div></div>
             <div></div>
         </StyledBurger>
+        <Sidebar open={open} transition={transition} navLocation={navLocation}/>
+        </div>
     )
 } 

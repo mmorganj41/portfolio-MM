@@ -10,6 +10,14 @@
   --colorThemeLightOrange: #deae72;
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   font-size: 1rem;
   font-family: 'Encode Sans Expanded', sans-serif;
