@@ -11,7 +11,6 @@ import Projects from './components/Projects/Projects';
 type Ref = HTMLDivElement | null;
 
 function App() {
-  const containerRef = useRef<HTMLDivElement>(null);
   const mainRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
@@ -22,27 +21,19 @@ function App() {
 
   useEffect(() => {
     const updatePosition = () => {
-      if (containerRef.current) {
-        setContainerScroll(containerRef.current.scrollTop);
-        visibleInContainer([mainRef.current, aboutRef.current, projectsRef.current, contactRef.current]);
-      }
+      setContainerScroll(window.scrollY);
+      visibleInContainer([mainRef.current, aboutRef.current, projectsRef.current, contactRef.current]);
     }
-    if (containerRef.current) {
-      containerRef.current.addEventListener("scroll", updatePosition);
-      updatePosition();
-    }
+    window.addEventListener("scroll", updatePosition);
+    updatePosition();
 
     return () => {
-      if (containerRef.current) {
-        containerRef.current.removeEventListener("scroll", updatePosition);
-      }
+      window.removeEventListener("scroll", updatePosition);
     }          
   }, []);
 
   function visibleInContainer(elements: Ref[]) {
-    if (!containerRef.current) return;
-    const containerTop = containerRef.current.scrollTop;
-
+    const containerTop = window.scrollY;
     let result = 1;
     let eleTop = 0;
     let eleBottom = 0;
@@ -63,7 +54,7 @@ function App() {
 
 
   return (
-    <main ref={containerRef}>
+    <main>
       <Nav containerScroll={containerScroll} navLocation={navLocation}/>
       <Main ref={mainRef}/>
       <About ref={aboutRef}/>

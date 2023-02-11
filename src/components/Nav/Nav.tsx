@@ -30,6 +30,8 @@ export default function Nav(Props: Props){
     const [windowSize, setWindowSize] = useState(0);
     const [open, setOpen] = useState(false);
 
+    console.log(windowSize, containerScroll);
+
     useEffect(() => {
       updateWindowSize();
       window.addEventListener("resize", updateWindowSize);
