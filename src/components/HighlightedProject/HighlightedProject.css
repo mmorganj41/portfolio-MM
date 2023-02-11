@@ -20,6 +20,7 @@
 .HighlightedProject li {
     list-style-type: '»';
     padding-inline-start: 1ch;
+    margin-bottom: .75rem;
 }
 
 .HighlightedProject .name {
