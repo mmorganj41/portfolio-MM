@@ -87,6 +87,10 @@ a {
   transition: transform .3s;
 }
 
+button {
+  cursor: pointer
+}
+
 
 .btn--bg {
   padding: 1rem 6rem;
