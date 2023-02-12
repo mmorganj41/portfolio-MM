@@ -30,6 +30,10 @@
     padding: 0 1rem;
 }
 
+.Nav.navitems li:first-child {
+    display: none;
+}
+
 .Nav > .imageContainer {
     padding-left: 20px;
 }

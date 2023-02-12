@@ -8,8 +8,8 @@ const scrollTransition = 64;
 
 const StyledNav = styled.nav<{ transition: boolean}>`
   height: ${({transition}) => transition ? '100px': '50px'};
-  background-color: ${({transition}) => transition ? 'transparent' : 'var(--colorThemeExtraDark)'};
-  color: ${({transition}) => transition ? 'var(--colorThemeExtraDark)': 'var(--colorThemeLight)'};
+  background-color: ${({transition}) => transition ? 'transparent' : 'var(--colorThemeDarker)'};
+  color: ${({transition}) => transition ? 'var(--colorThemeDarker)': 'var(--colorThemeLight)'};
 `
 const StyledList = styled.ul<{ transition: boolean; navLocation: number}>`
   padding-top: ${({transition}) => transition ? '25px': 'none'};
