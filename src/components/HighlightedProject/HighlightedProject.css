@@ -3,6 +3,8 @@
 }
 
 .HighlightedProject {
+    position: -webkit-sticky;
+    position: sticky;
     box-shadow: rgba(100,100,111,.2) 0 7px 29px 0;
     background: #fff;
     padding: 2.5rem;
@@ -14,7 +16,8 @@
     flex-direction: column;
     align-items: flex-start;
     width: 95%;
-    margin: auto;
+    bottom: -3rem;
+    transition: 1s;
 }
 
 .HighlightedProject li {
