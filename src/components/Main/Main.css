@@ -17,7 +17,11 @@
     display:inline-block;
     font-weight: 600;
     color: var(--colorThemeOrange);
-    animation: fadeInAbove 1s linear 1;
+    animation-delay: 0s;
+    animation-name: fadeInAbove;
+    animation-duration: 1.0s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
     font-size: 2.8rem;
     transition: 1s;
 }
