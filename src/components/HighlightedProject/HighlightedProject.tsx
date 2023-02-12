@@ -18,8 +18,8 @@ export default function HighlightedProject(props: Props) {
         return (<li key={i}>{bullet}</li>)
     })
 
-    return (<div className='HighlightedProject'>
-        <div className='name' id="HighlightedProject">
+    return (<div className='HighlightedProject' id="HighlightedProject">
+        <div className='name'>
             <h2>{projects[selectedIndex].name}, <span>{projects[selectedIndex].summary}</span></h2>
         </div>
         <div className='carousel'>
