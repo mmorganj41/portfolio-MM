@@ -7,8 +7,9 @@ export default function Info() {
             <h3 className='title'>About Me</h3>
             
             <div className='details'>
-                <p>A <strong>software engineer</strong> with a 5+ year background in biomedical engineering and consulting with demonstrated competence in finding solutions to complex problems.</p>
-                <p>Understands and can communicate technical information to a variety of individuals, developed through experiences in diverse collaborations. Continuously looks to improve, as shown by continuous re-iteration of technology and optimization of projects on a team and in personal life.</p>
+                <p>Hello there! I'm a fullstack <strong>software engineer</strong> with a 5+ year history in biomedical engineering and consulting, and a passion for learning, growing, and problem solving.</p>
+                <p>I probably code a bit too much, but outside of that I'm a fan of nutrition, fitness, music (guitar and piano), reading, and social outreach. I enjoy volunteering regularly.</p>
+                <p>I'm a very regimented person, and will accomplish anything I decide to put my mind to. Let's work together to learn and achieve great things!</p>
             </div>
             <div className='photo'>
                 <img src='https://i.imgur.com/I2jrKKp.jpg' />
