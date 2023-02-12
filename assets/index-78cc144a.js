@@ -98,8 +98,8 @@ Error generating stack: `+l.message+`
     }  
 `;function i0(e){const{transition:t,open:n,setOpen:r,navLocation:i,largeEnough:l}=e;function o(){r(!n)}return H("div",{className:"Burger",children:[l?null:H(r0,{open:n,transition:t,onClick:o,children:[S("div",{}),S("div",{}),S("div",{})]}),S(n0,{open:n,largeEnough:l,transition:t,navLocation:i})]})}const l0=64,o0=ei.nav`
   height: ${({transition:e})=>e?"100px":"50px"};
-  background-color: ${({transition:e})=>e?"transparent":"var(--colorThemeExtraDark)"};
-  color: ${({transition:e})=>e?"var(--colorThemeExtraDark)":"var(--colorThemeLight)"};
+  background-color: ${({transition:e})=>e?"transparent":"var(--colorThemeDarker)"};
+  color: ${({transition:e})=>e?"var(--colorThemeDarker)":"var(--colorThemeLight)"};
 `,u0=ei.ul`
   padding-top: ${({transition:e})=>e?"25px":"none"};
   
