@@ -1,9 +1,11 @@
 .Info {
     max-width: 50rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .Info .details {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .Info .details p {
@@ -11,6 +13,13 @@
     width: 90%;
 }
 
-.Info .socials {
+.Info .socials, .Info .photo {
     margin-bottom: 2rem;
+    align-self: center;
+}
+
+.Info img {
+    max-width: 20rem;
+    border-radius: 5rem;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,.15);
 }
