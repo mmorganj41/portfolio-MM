@@ -19,6 +19,7 @@ export default function ProjectList(props: Props) {
 
     return (
         <div className='ProjectList'>
+            <h2 className='title'>Project List</h2>
             {projectJSX}
         </div>
     )
