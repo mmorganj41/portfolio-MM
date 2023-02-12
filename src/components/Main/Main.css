@@ -27,7 +27,7 @@
 }
 
 .Main.section .name:hover {
-    transform: translateY(-.3rem) scale(1.1)
+    color: var(--colorThemeLight);
 }
 
 .Main.section .container > div {
@@ -60,7 +60,7 @@
         opacity: 0;
     }
     100% {
-        transform: translateY(0);
+        transform: translateY(0%);
         opacity: 1;
     }
 }
