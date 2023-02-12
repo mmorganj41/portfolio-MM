@@ -1,8 +1,10 @@
 .Main.section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .Main.section h1 {
@@ -43,6 +45,10 @@
     align-items: center;
 }
 
+.Main.section .hidden {
+    height: 3rem;
+    width: 3rem;
+}
 
 @keyframes fadeInAbove {
     0% {
