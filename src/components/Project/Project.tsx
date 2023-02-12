@@ -19,10 +19,12 @@ export default function Project(props: Props) {
     }
 
     return (
+        <a href="#HighlightedProject">
         <div onClick={() => handleClick(index)} className={`Project ${selectedIndex === index && 'selected'}`}>
             <img src={image} />
             <h5 className='projectTitle'>{name}</h5>
             <p>{summary}</p>
         </div>
+        </a>
     )
 }

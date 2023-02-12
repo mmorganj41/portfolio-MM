@@ -19,10 +19,12 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
                     <div className="secondary">Front-end and Back-end creativity with a focus on JS.</div>
                 </h2> 
                 <div className='data'>
-                <ProjectList projects={projects} liftIndex={liftIndex} selectedIndex={selectedIndex} setCarouselIndex={setCarouselIndex}/>
-                <div className='container'>
-                <HighlightedProject projects={projects} selectedIndex={selectedIndex} carouselIndex={carouselIndex} setCarouselIndex={setCarouselIndex}/>
-                </div>
+                    <div className='container1'>
+                        <ProjectList projects={projects} liftIndex={liftIndex} selectedIndex={selectedIndex} setCarouselIndex={setCarouselIndex}/>
+                    </div>
+                    <div className='container2'>
+                        <HighlightedProject projects={projects} selectedIndex={selectedIndex} carouselIndex={carouselIndex} setCarouselIndex={setCarouselIndex}/>
+                    </div>
                 </div>
             </div>
         </section>
