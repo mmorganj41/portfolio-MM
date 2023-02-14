@@ -5,6 +5,10 @@
     border-radius: 5px;
 }
 
+.Project .picture {
+    position: relative;
+}
+
 .Project {
     background:#cecaca;
     padding: 2.5rem;
@@ -56,4 +60,38 @@
 
 .Project p {
     font-style: italic;
+}
+
+.Project .label {
+    border-color: var(--colorThemeOrange) !important;
+    background-color: var(--colorThemeOrange);
+    left: calc(-1rem - 1.2em);
+    margin-right: -1.2em;
+    padding-left: calc(1rem + 1.2em);
+    padding-right: 1.2em;
+    position: absolute;
+    margin: 0;
+    top: 5%;
+    margin-right: 0px;
+    min-width: -webkit-max-content;
+    min-width: -moz-max-content;
+    min-width: max-content;
+    border-radius: 0 .28571429rem .28571429rem 0;
+    animation: 1s ease-out render;
+}
+
+.Project .label::after {
+    background-color: transparent !important;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: inherit;
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 0;
+    border-style: solid;
+    border-width: 0 1.2em 1.2em 0;
+    width: 0;
+    height: 0;
 }
