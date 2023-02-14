@@ -1,5 +1,6 @@
 .SocialIcon {
     display: inline-flex;
+    position: relative;
     align-items: center;
     justify-content: center;
     height: 3.5rem;
@@ -16,3 +17,38 @@
 .SocialIcon:hover {
     background-color: var(--colorThemeOrange);
 }
+
+.SocialIcon .tooltip {
+    user-select: none;
+    opacity: 0;
+    background-color: #5c5f62;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    top: 110%;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-bottom: .2rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    border-radius: .2rem;
+    position: absolute;
+    z-index: 1;
+    transition: 1s;
+}
+
+.SocialIcon:hover .tooltip {
+    opacity: 1;
+}
+
+.tooltip::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #5c5f62 transparent;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,.15);
+  }
