@@ -21,6 +21,7 @@ export default function MenuList(props: Props) {
         <StyledLi className={inline ? 'inlineList' : ''} navLocation={navLocation}><a href='#about'>About</a></StyledLi>
         <StyledLi className={inline ? 'inlineList' : ''} navLocation={navLocation}><a href='#projects'>Projects</a></StyledLi>
         <StyledLi className={inline ? 'inlineList' : ''} navLocation={navLocation}><a href='#contact'>Contact</a></StyledLi>
+        <StyledLi className={inline ? 'inlineList' : ''} navLocation={navLocation}><a href='Resume_MichaelMorgan.pdf' target="_blank">Resume</a></StyledLi>
     </>
     );
 }
