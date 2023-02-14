@@ -1,5 +1,6 @@
 .HighlightedProject .links {
     margin-top: 2rem;
+    display: flex;
 }
 
 .HighlightedProject {
