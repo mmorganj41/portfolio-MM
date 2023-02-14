@@ -31,8 +31,8 @@ export default function HighlightedProject(props: Props) {
             </ul>
         </div>
         <div className='links'>
-            <SocialIcon icon='github' link={projects[selectedIndex].github} samePage={false}/>
-            <SocialIcon icon='play' link={projects[selectedIndex].deploy} samePage={false}/>
+            <SocialIcon icon='github' link={projects[selectedIndex].github} samePage={false} popup='Git Repo'/>
+            <SocialIcon icon='play' link={projects[selectedIndex].deploy} samePage={false} popup='Deployed'/>
         </div>
     </div>)
     
