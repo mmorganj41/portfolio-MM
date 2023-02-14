@@ -19,13 +19,13 @@ export default function HighlightedProject(props: Props) {
     })
 
     return (<div className='HighlightedProject' id="HighlightedProject">
-        <div className='name'>
-            <h2>{projects[selectedIndex].name}, <span>{projects[selectedIndex].summary}</span></h2>
+        <div  className='name'>
+            <h2 key={selectedIndex}>{projects[selectedIndex].name}, <span>{projects[selectedIndex].summary}</span></h2>
         </div>
         <div className='carousel'>
-            <Carousel images={projects[selectedIndex].images} carouselIndex={carouselIndex} setCarouselIndex={setCarouselIndex}/>
+            <Carousel key={selectedIndex} images={projects[selectedIndex].images} carouselIndex={carouselIndex} setCarouselIndex={setCarouselIndex}/>
         </div>
-        <div className='bullets'>
+        <div key={selectedIndex} className='bullets'>
             <ul>
                 {bullets}
             </ul>

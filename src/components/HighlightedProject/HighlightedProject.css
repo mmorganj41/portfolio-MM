@@ -21,6 +21,10 @@
     margin-bottom: 2rem;
 }
 
+.HighlightedProject .bullets, .HighlightedProject .carousel > div, .HighlightedProject .name > h2{
+    animation: render 1s ease-out;
+}
+
 .HighlightedProject li {
     list-style-type: '»';
     padding-inline-start: 1ch;
@@ -40,4 +44,13 @@
     font-weight: 300;
     font-style: italic;
     color: #a1a1a1;
+}
+
+@keyframes render {
+ 0% {
+    opacity: 0;
+ }   
+ 100% {
+    opacity: 1;
+ }
 }
