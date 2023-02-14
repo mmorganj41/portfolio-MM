@@ -65,10 +65,10 @@
 .Project .label {
     border-color: var(--colorThemeOrange) !important;
     background-color: var(--colorThemeOrange);
-    left: calc(-1rem - 1.2em);
-    margin-right: -1.2em;
+    left: calc(-1rem - .2em);
+    margin-right: -.6em;
     padding-left: calc(1rem + 1.2em);
-    padding-right: 1.2em;
+    padding-right: .6em;
     position: absolute;
     margin: 0;
     top: 5%;
