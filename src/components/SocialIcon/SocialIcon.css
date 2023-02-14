@@ -1,6 +1,13 @@
-.SocialIcon {
-    display: inline-flex;
+.SocialIcon.container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: start;
     position: relative;
+}
+
+.SocialIcon.icon {
+    display: flex;
     align-items: center;
     justify-content: center;
     height: 3.5rem;
@@ -14,34 +21,36 @@
     transition: .4s;
 }
 
-.SocialIcon:hover {
+.SocialIcon.icon:hover{
     background-color: var(--colorThemeOrange);
 }
 
-.SocialIcon .tooltip {
+.SocialIcon.tooltip {
     user-select: none;
     opacity: 0;
     background-color: #5c5f62;
     color: #fff;
     text-align: center;
     vertical-align: middle;
-    top: 110%;
     font-size: 1rem;
     font-weight: 400;
+    top: 90%;
+    left: -12%;
+    padding-top: .1rem;
     padding-bottom: .2rem;
     padding-left: .5rem;
     padding-right: .5rem;
     border-radius: .2rem;
-    position: absolute;
+    position:absolute;
     z-index: 1;
-    transition: 1s;
+    transition: .5s;
 }
 
-.SocialIcon:hover .tooltip {
+.SocialIcon.icon:hover + .SocialIcon.tooltip{
     opacity: 1;
 }
 
-.tooltip::after {
+.SocialIcon.tooltip::after {
     content: " ";
     position: absolute;
     bottom: 100%;
