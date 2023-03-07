@@ -18,3 +18,13 @@
     margin-bottom: 1.5rem;
     align-self: center;
 }
+
+.ProjectList .load {
+    margin: .5rem;
+    padding: .5rem;
+    align-self: center;
+}
+
+.ProjectList .load:hover {
+    transform: scale(1.1);
+}
