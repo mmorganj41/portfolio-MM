@@ -123,4 +123,22 @@ progress.addImages(
     'https://i.imgur.com/IWMF5Jt.png',
 );
 
-const projects = [progress, ration, pokeCatcher, battleship];
+const snake = new ProjectInfo('Snake', 
+    'A browser game built with Typescript and React',
+    'https://github.com/mmorganj41/react-snake',
+    'https://mmorganj41.github.io/react-snake/',
+);
+
+snake.addBullets(
+    'Crafted a replica of the classic "snake" game using typescript, react, and vanilla css.',
+    'Implemented custom CSS along with react state hooks to create personality-rich snake and mice components.'
+);
+
+snake.addImages(
+    'https://i.imgur.com/vliGyNt.png',
+    'https://i.imgur.com/KXVUORD.png',
+    'https://i.imgur.com/TXXaIfL.png',
+    
+);
+
+const projects = [progress, snake, ration, pokeCatcher, battleship];
